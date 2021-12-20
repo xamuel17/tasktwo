@@ -1,0 +1,10 @@
+Step 1: create project - npm init
+Step 2: install need packages - npm i express-unless bcryptjs jsonwebtoken mongoose-unique-validator --save
+Step 3 : install nodemon -npm install -g nodemon
+Step 4: install otp generator - npm i otp-generator
+Step 5: install  crypto -npm i msg91 crypto --save
+Step 6: install env -npm install dotenv
+Step 7 : install uuid - npm install uuid
+Set Powershell as admin - Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+
