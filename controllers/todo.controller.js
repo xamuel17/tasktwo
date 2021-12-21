@@ -49,3 +49,17 @@ exports.deleteTodo = (req, res, next) => {
         });
     });
 };
+
+
+
+exports.updateTodo = (req, res, next) => {
+    todoService.updateTodo(req.headers, req.body, (error, results) => {
+        if (error) {
+            return next(error);
+        }
+        return res.status(200).send({
+            message: "success",
+            data: results,
+        });
+    });
+};

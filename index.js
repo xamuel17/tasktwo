@@ -42,8 +42,11 @@ app.use(
         path: [
             { url: "/users/login", methods: ["POST"] },
             { url: "/users/register", methods: ["POST"] },
-            { url: "/users/otpLogin", methods: ["POST"] },
-            { url: "/users/verifyOTP", methods: ["POST"] },
+            { url: "/users/refresh-token", methods: ["POST"] },
+
+            //TODO #####Code Needed In The Future #####
+            // { url: "/users/otpLogin", methods: ["POST"] },
+            // { url: "/users/verifyOTP", methods: ["POST"] },
 
         ],
     })
