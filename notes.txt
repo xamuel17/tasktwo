@@ -5,6 +5,8 @@ Step 4: install otp generator - npm i otp-generator
 Step 5: install  crypto -npm i msg91 crypto --save
 Step 6: install env -npm install dotenv
 Step 7 : install uuid - npm install uuid
+Step 8 : intall uuidv4 - npm install uuidv4
 Set Powershell as admin - Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
+${command:workbench.action.terminal.kill}
 

@@ -38,13 +38,11 @@ exports.login = (req, res, next) => {
     });
 };
 
-exports.userProfile = (req, res, next) => {
-    return res.status(401).json({ message: "Authorized User!!" });
-};
 
 
-exports.otpLogin = (req, res, next) => {
-    userServices.createNewOTP(req.body, (error, results) => {
+exports.refreshToken = (req, res, next) => {
+
+    userServices.refreshToken(req.body, (error, results) => {
         if (error) {
             return next(error);
         }
@@ -55,14 +53,32 @@ exports.otpLogin = (req, res, next) => {
     });
 };
 
-exports.verifyOTP = (req, res, next) => {
-    userServices.verifyOTP(req.body, (error, results) => {
-        if (error) {
-            return next(error);
-        }
-        return res.status(200).send({
-            message: "success",
-            data: results,
-        });
-    });
-};
+//#############Code Needed in the Future! ###########################
+// exports.userProfile = (req, res, next) => {
+//     return res.status(401).json({ message: "Authorized User!!" });
+// };
+
+
+// exports.otpLogin = (req, res, next) => {
+//     userServices.createNewOTP(req.body, (error, results) => {
+//         if (error) {
+//             return next(error);
+//         }
+//         return res.status(200).send({
+//             message: "success",
+//             data: results,
+//         });
+//     });
+// };
+
+// exports.verifyOTP = (req, res, next) => {
+//     userServices.verifyOTP(req.body, (error, results) => {
+//         if (error) {
+//             return next(error);
+//         }
+//         return res.status(200).send({
+//             message: "success",
+//             data: results,
+//         });
+//     });
+// };
